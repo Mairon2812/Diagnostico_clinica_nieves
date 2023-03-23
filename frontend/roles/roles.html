@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Seleccionar Rol</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-image: url("https://scontent-bog1-1.xx.fbcdn.net/v/t39.30808-6/310090663_479167694251302_6273796384121344795_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=bmdexZuC5KIAX_296Md&_nc_ht=scontent-bog1-1.xx&oh=00_AfBRQK1ww80kFsgHrhMzjj7SGE2vWJGKq9BP9HoBxsoW5g&oe=641F0B82");
+			background-size: cover;
+			background-position: center;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 90vh;
+		}
+
+		form {
+			background-color: rgba(255, 255, 255, 0.8);
+			border-radius: 5px;
+			padding: 20px;
+			box-shadow: 0px 0px 10px #ccc;
+			width: 400px;
+			text-align: center;
+			animation: fadeIn 0.5s;
+		}
+
+		h1 {
+			margin-top: 0;
+			color: #666;
+			animation: fadeInUp 0.5s;
+		}
+
+		label {
+			display: block;
+			margin-bottom: 10px;
+			color: #666;
+			font-weight: bold;
+			font-size: 18px;
+			animation: fadeInUp 0.5s;
+		}
+
+		input[type="radio"] {
+			margin-right: 10px;
+			transform: scale(1.5);
+		}
+
+		input[type="submit"] {
+			background-color: #4CAF50;
+			color: white;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			font-size: 16px;
+			cursor: pointer;
+			transition: background-color 0.3s;
+			animation: fadeInUp 0.5s;
+		}
+
+		input[type="submit"]:hover {
+			background-color: #3e8e41;
+		}
+
+		@keyframes fadeIn {
+			from {
+				opacity: 0;
+			}
+
+			to {
+				opacity: 1;
+			}
+		}
+
+		@keyframes fadeInUp {
+			from {
+				transform: translateY(50px);
+				opacity: 0;
+			}
+
+			to {
+				transform: translateY(0);
+				opacity: 1;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<form method="post" action="procesar.php">
+		<h1>Seleccionar Rol</h1>
+		<label>
+			<input type="radio" name="rol" value="doctor">
+			Doctor
+		</label>
+		<label>
+			<input type="radio" name="rol" value="administrador">
+			Administrador
+		</label>
+		<label>
+			<input type="radio" name="rol" value="usuario">
+			Usuario
+		</label>
+		<input type="submit" name="submit" value="Seleccionar">
+	</form>
+
+	<script>
+		// Centrar el formulario en la mitad de la pantalla
+		const form = document.querySelector('form');
+		const body = document.querySelector('body');
+		form.style.marginTop = (body.clientHeight - form.clientWidth) / 2 + 'px';
+	</script>
+</body>
+
+</html>
